@@ -37,8 +37,6 @@ function checkRequiredFields(inputArr) {
       showSuccess(input);
     }
   });
-  console.log("is valid " + isValid);
-  return isValid;
 }
 
 // Check input length
