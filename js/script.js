@@ -36,10 +36,7 @@ function checkRequiredFields(inputArr) {
       showError(input, `${getFieldName(input)} is required`);
       isValid = false;
     } else {
-      checkLength(username, 3, 15);
-      checkLength(password, 6, 25);
-      checkEmail(email);
-      checkPasswordsMatch(password, password2);
+      showSuccess(input);
       isValid = true;
     }
   });
@@ -80,10 +77,8 @@ function getFieldName(input) {
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   checkRequiredFields([username, email, password, password2]);
-  //   if (checkRequiredFields([username, email, password, password2])) {
-  //     checkLength(username, 3, 15);
-  //     checkLength(password, 6, 25);
-  //     checkEmail(email);
-  //     checkPasswordsMatch(password, password2);
-  //   }
+  checkLength(username, 3, 15);
+  checkLength(password, 6, 25);
+  checkEmail(email);
+  checkPasswordsMatch(password, password2);
 });
