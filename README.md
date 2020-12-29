@@ -1,6 +1,9 @@
 # From Validator
 
-Practice project in javascript
+Practice project in javascript.
+
+Login form validation in HTML, CSS and Javascript
+
 ### Prerequisites
 
 * Browser (Chrome, FireFox)
