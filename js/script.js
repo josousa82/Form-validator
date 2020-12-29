@@ -30,14 +30,11 @@ function checkEmail(input) {
 
 // Check required
 function checkRequiredFields(inputArr) {
-  let isValid;
   inputArr.forEach((input) => {
     if (input.value.trim() === "") {
       showError(input, `${getFieldName(input)} is required`);
-      isValid = false;
     } else {
       showSuccess(input);
-      isValid = true;
     }
   });
   console.log("is valid " + isValid);
