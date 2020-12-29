@@ -22,9 +22,6 @@ function showSuccess(input) {
 
 function isValidEmail(email) {
   const reg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-
-  console.log(reg.test(String(email).toLowerCase()));
-
   return reg.test(String(email).toLowerCase());
 }
 
@@ -38,7 +35,7 @@ form.addEventListener("submit", function (e) {
     showSuccess(username);
   }
 
-  if ((email.value === "") || !(isValidEmail(email.value))) {
+  if (email.value === "" || !isValidEmail(email.value)) {
     showError(email, "Email is required");
   } else {
     showSuccess(email);
